@@ -1,1 +1,11 @@
+Transferable Deep Reinforcement Learning Framework for Efficient Critical Flow Routing
 
+Abstract: The emergence of 6G and beyond networks necessitates autonomous network management to satisfy diverse user and application requirements while maintaining overall network stability. Traffic Engineering (TE) plays a crucial role in meeting evolving network demands by identifying and managing a set of critical flows to balance the overall link utilization in real-time. 
+AI-driven methods, particularly Reinforcement Learning (RL), have shown promise in addressing this challenge by enabling agents to learn sequential routing decisions through interaction with the network environment. However, integrating RL with deep neural networks introduces significant computational overhead and training costs, especially when adapting to frequently changing network operator objectives that are closely related to applications being served. To address this, we propose a transfer learning-based RL framework for critical flow selection and rerouting in TE. Our solution is built upon a novel MDP formulation and leverages learned transferable state representations from a modified Deep Q-Learning model. 
+These representations are then reused within a Linear Function Approximation (LFA) framework, to enable rapid and efficient adaptation to new operator objectives without the need for retraining the entire model. Through extensive experiments across multiple network sizes, we demonstrate that the proposed approach not only achieves significant computational efficiency but also exhibits strong transfer adaptability under changing network operator objectives, effectively selecting and rerouting critical flows that minimize network congestion and maintain balanced link utilization.
+
+The experiments were conducted for three new transfer objectives (λ = 0.55, 0.6, and 0.7) in all the setups.
+The complete results and implementation code are available in this repository.
+Import ncessary libraries as mentioned in requirements.txt
+Then run the code by selecting the necessary topology and the code also includes Dataset Generation followed by DS-DQN training and transfer vs baseline comparisons.
+Our results for new transfer objectives (λ = 0.55, 0.6, and 0.7) can be found in results sheet
